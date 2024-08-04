@@ -19,20 +19,36 @@ function getUserChoice(){
 }
 
 function compareChoices(myChoice,botChoice){
+    let printArray = ["Rock","Paper","Scissors"];          //To avoid writing the exact terms in console.log again and again
     if ((myChoice === 0 && botChoice === 2) || (myChoice === 1 && botChoice === 0) || (myChoice === 2 && botChoice === 1))
+    {
+        console.log("You Win! " + printArray[myChoice] + " beats " + printArray[botChoice]);
         return ('W');   // For my winning conditions, it's a W
+    }
+        
     else if ((myChoice === 0 && botChoice === 1) || (myChoice === 1 && botChoice === 2) || (myChoice === 2 && botChoice === 0))
+    {
+        console.log("You Lose! " + printArray[botChoice] + " beats " + printArray[myChoice]);
         return ('L');   // For my losing conditions, it's an L
+    }
     else
+    {
+        console.log("It's a Tie! " + printArray[botChoice] + " ties with " + printArray[myChoice]);
         return ('T');   // It will be a tie if no one wins or loses
+    }
+        
 }
-
+function showResult(result){
+    switch (result){
+        case 'W': alert("User WINSSSSS")
+    }
+}
 function playRound(humanChoice, computerChoice){
     let roundResult = compareChoices(humanChoice,computerChoice);
+
 }
 
 const humanSelection = getUserChoice();
 const computerSelection = getComputerChoice();
 let humanScore = 0
    ,computerScore = 0;
-   
