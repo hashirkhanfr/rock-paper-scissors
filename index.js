@@ -44,7 +44,10 @@ function playGame(maxGames){
         console.log("------GAME " + i + "------");
         const humanSelection = getUserChoice();        //Calls function which prompts user for input and returns the respective integer 0,1 or 2
         const computerSelection = getComputerChoice(); //Calls function which generates random number between 0 - 2
-        playRound(humanSelection,computerSelection,humanScore,computerScore);     // playing the main round
+        switch(playRound(humanSelection,computerSelection)){       // playing the main round and returning the result to increment scores
+            case 'W' : humanScore++    ; break;
+            case 'L' : computerScore++ ; break;
+        }     
     }
     alert(`Player's Score: ${humanScore}` + `\nComputer's Score: ${computerScore}`);   // alerts with the final result of the game
 
