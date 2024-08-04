@@ -7,8 +7,8 @@ function getComputerChoice(){
     return (getRandomNumer());    // returns the random number between 0 - 2 from getRandomNumber().
 }
 
-function getUserChoice(){
-    let stringChoice = prompt("Rock,Paper or Scissors?");  // holds the user choice in a string form.
+function getUserChoice(count){
+    let stringChoice = prompt(`--------Round ${count}--------\nRock,Paper or Scissors?`);  // holds the user choice in a string form.
     let finalChoice;                                       // to hold the integer value for user's choice to later compare with computer's choice
     switch(stringChoice.toLowerCase()){                    // converting string to lowercase to handle exceptions, and then switching it.
         case "rock":        finalChoice = 0; break;        // 0 = Rock
@@ -41,8 +41,8 @@ function playRound(myChoice,botChoice){
 
 function playGame(maxGames){
     for (let i = 1; i <= maxGames; i++){
-        console.log("------GAME " + i + "------");
-        const humanSelection = getUserChoice();        //Calls function which prompts user for input and returns the respective integer 0,1 or 2
+        console.log("------ROUND " + i + "------");
+        const humanSelection = getUserChoice(i);        //Calls function which prompts user for input and returns the respective integer 0,1 or 2
         const computerSelection = getComputerChoice(); //Calls function which generates random number between 0 - 2
         switch(playRound(humanSelection,computerSelection)){       // playing the main round and returning the result to increment scores
             case 'W' : humanScore++    ; break;
