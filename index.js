@@ -18,7 +18,7 @@ function getUserChoice(){
     return (finalChoice);
 }
 
-function compareChoices(myChoice,botChoice){
+function playRound(myChoice,botChoice){
     let printArray = ["Rock","Paper","Scissors"];          //To avoid writing the exact terms in console.log again and again
     if ((myChoice === 0 && botChoice === 2) || (myChoice === 1 && botChoice === 0) || (myChoice === 2 && botChoice === 1))
     {
@@ -37,18 +37,6 @@ function compareChoices(myChoice,botChoice){
         return ('T');   // It will be a tie if no one wins or loses
     }
         
-}
-
-function playRound(humanChoice, computerChoice,humanScore,computerScore){
-    let roundResult = compareChoices(humanChoice,computerChoice);  // will output the result and return the result character 
-    switch (roundResult){
-        case 'W':                                                  // for the case of user winning
-            humanScore++;
-            break;
-        case 'L':                                                  // for the case of computer winning
-            computerScore++;
-            break;
-    }
 }
 
 function playGame(maxGames){
