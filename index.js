@@ -40,20 +40,20 @@ function compareChoices(myChoice,botChoice){
 }
 
 function playRound(humanChoice, computerChoice,humanScore,computerScore){
-    let roundResult = compareChoices(humanChoice,computerChoice);
+    let roundResult = compareChoices(humanChoice,computerChoice);  // will output the result and return the result character 
     switch (roundResult){
-        case 'W':
+        case 'W':                                                  // for the case of user winning
             humanScore++;
             break;
-        case 'L':
+        case 'L':                                                  // for the case of computer winning
             computerScore++;
             break;
     }
 }
 
-const humanSelection = getUserChoice();
-const computerSelection = getComputerChoice();
-let humanScore = 0
-   ,computerScore = 0;
-
-playRound(humanSelection,computerSelection,humanScore,computerScore);
+const humanSelection = getUserChoice();        //Calls function which prompts user for input and returns the respective integer 0,1 or 2
+const computerSelection = getComputerChoice(); //Calls function which generates random number between 0 - 2
+let humanScore = 0                             // For storing user's score after each round
+   ,computerScore = 0;                         // For storing computer's score after each round
+ 
+playRound(humanSelection,computerSelection,humanScore,computerScore);     // playing the main round
