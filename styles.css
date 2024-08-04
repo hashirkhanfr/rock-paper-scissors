@@ -1,0 +1,10 @@
+body{
+    height: 100vh;
+    background: linear-gradient(rgb(0, 241, 141),rgb(0, 140, 255));
+    margin-top: 250px;
+    font-family: Poppins,sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 10rem;
+    text-align: center;
+}
