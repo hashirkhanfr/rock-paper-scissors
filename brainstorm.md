@@ -20,5 +20,5 @@
 - COMPARE choices
 - CHECK conditions for the choices to decide who won
 - INCREMENT the winner's score
-- IF game has not been played for 5 rounds yet
+- IF game has not been played for 5 rounds yet <br>
     Play another round
