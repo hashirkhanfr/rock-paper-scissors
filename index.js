@@ -51,9 +51,18 @@ function playRound(humanChoice, computerChoice,humanScore,computerScore){
     }
 }
 
-const humanSelection = getUserChoice();        //Calls function which prompts user for input and returns the respective integer 0,1 or 2
-const computerSelection = getComputerChoice(); //Calls function which generates random number between 0 - 2
+function playGame(maxGames){
+    for (let i = 1; i <= maxGames; i++){
+        console.log("------GAME " + i + "------");
+        const humanSelection = getUserChoice();        //Calls function which prompts user for input and returns the respective integer 0,1 or 2
+        const computerSelection = getComputerChoice(); //Calls function which generates random number between 0 - 2
+        playRound(humanSelection,computerSelection,humanScore,computerScore);     // playing the main round
+    }
+    alert(`Player's Score: ${humanScore}` + `\nComputer's Score: ${computerScore}`);   // alerts with the final result of the game
+
+}
+
 let humanScore = 0                             // For storing user's score after each round
    ,computerScore = 0;                         // For storing computer's score after each round
- 
-playRound(humanSelection,computerSelection,humanScore,computerScore);     // playing the main round
+
+playGame(5);                                   //plays the game for 5 rounds
