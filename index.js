@@ -47,6 +47,7 @@ function playRound(humanChoice, computerChoice,humanScore,computerScore){
             break;
         case 'L':
             computerScore++;
+            break;
     }
 }
 
@@ -54,4 +55,5 @@ const humanSelection = getUserChoice();
 const computerSelection = getComputerChoice();
 let humanScore = 0
    ,computerScore = 0;
-   
+
+playRound(humanSelection,computerSelection,humanScore,computerScore);
