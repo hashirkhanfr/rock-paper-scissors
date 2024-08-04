@@ -15,4 +15,5 @@ function getUserChoice(){
         case "paper":       finalChoice = 1; break;        // 1 = Paper
         case "scissors":    finalChoice = 2; break;        // 2 = Scissors
     }
+    return (finalChoice);
 }
