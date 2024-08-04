@@ -39,12 +39,19 @@ function compareChoices(myChoice,botChoice){
         
 }
 
-function playRound(humanChoice, computerChoice){
+function playRound(humanChoice, computerChoice,humanScore,computerScore){
     let roundResult = compareChoices(humanChoice,computerChoice);
-
+    switch (roundResult){
+        case 'W':
+            humanScore++;
+            break;
+        case 'L':
+            computerScore++;
+    }
 }
 
 const humanSelection = getUserChoice();
 const computerSelection = getComputerChoice();
 let humanScore = 0
    ,computerScore = 0;
+   
