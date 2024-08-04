@@ -17,3 +17,8 @@ function getUserChoice(){
     }
     return (finalChoice);
 }
+
+function playRound(humanChoice, computerChoice){
+    let humanChoice = getUserChoice();
+    let computerChoice = getComputerChoice();
+}
