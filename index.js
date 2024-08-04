@@ -38,11 +38,7 @@ function compareChoices(myChoice,botChoice){
     }
         
 }
-function showResult(result){
-    switch (result){
-        case 'W': alert("User WINSSSSS")
-    }
-}
+
 function playRound(humanChoice, computerChoice){
     let roundResult = compareChoices(humanChoice,computerChoice);
 
