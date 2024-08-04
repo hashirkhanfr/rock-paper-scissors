@@ -6,3 +6,13 @@ function getRandomNumer(){
 function getComputerChoice(){
     return (getRandomNumer());
 }
+
+function getUserChoice(){
+    let stringChoice = prompt("Rock,Paper or Scissors?");
+    let finalChoice;
+    switch(stringChoice.toLowerCase()){
+        case "rock":        finalChoice = 0; break;
+        case "paper":       finalChoice = 1; break;
+        case "scissors":    finalChoice = 2; break;
+    }
+}
