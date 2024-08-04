@@ -11,4 +11,14 @@
    - **humanScore and computerScore** : Initialized to 0, will track the scores of player and computer
    - **humanSelection** : stores the returned value from getHumanChoice()
    - **computerSelection** : stores the returned value from getComputerChoice()
-   -
+
+
+
+# Simple Pseudocode
+- OBTAIN User's choice
+- GENERATE random choice for Computer
+- COMPARE choices
+- CHECK conditions for the choices to decide who won
+- INCREMENT the winner's score
+- IF game has not been played for 5 rounds yet
+    Play another round
