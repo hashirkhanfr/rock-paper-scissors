@@ -28,8 +28,11 @@ function compareChoices(myChoice,botChoice){
 }
 
 function playRound(humanChoice, computerChoice){
-    
+    let roundResult = compareChoices(humanChoice,computerChoice);
 }
 
 const humanSelection = getUserChoice();
 const computerSelection = getComputerChoice();
+let humanScore = 0
+   ,computerScore = 0;
+   
