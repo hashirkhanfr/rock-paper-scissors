@@ -5,6 +5,7 @@
    - **getHumanChoice** - to prompt and get a valid choice from user
    - **playRound** - this uses human choice and computer choice returned from the functions and then logs the winner.
                      Also increments either userScore or computerScore upon winning
+   - **playGame** - to call playRound() 5 times to play the game
 
 ## Variables
    - **humanScore and computerScore** : Initialized to 0, will track the scores of player and computer
