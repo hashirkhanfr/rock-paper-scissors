@@ -18,6 +18,15 @@ function getUserChoice(){
     return (finalChoice);
 }
 
+function compareChoices(myChoice,botChoice){
+    if ((myChoice === 0 && botChoice === 2) || (myChoice === 1 && botChoice === 0) || (myChoice === 2 && botChoice === 1))
+        return ('W');   // For my winning conditions, it's a W
+    else if ((myChoice === 0 && botChoice === 1) || (myChoice === 1 && botChoice === 2) || (myChoice === 2 && botChoice === 0))
+        return ('L');   // For my losing conditions, it's an L
+    else
+        return ('T');   // It will be a tie if no one wins or loses
+}
+
 function playRound(humanChoice, computerChoice){
     
 }
