@@ -4,5 +4,5 @@ function getRandomNumer(){
 } 
 
 function getComputerChoice(){
-    let computerSelection = getRandomNumer();
+    return (getRandomNumer());
 }
