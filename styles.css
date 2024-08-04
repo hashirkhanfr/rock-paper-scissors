@@ -5,6 +5,19 @@ body{
     font-family: Poppins,sans-serif;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 10rem;
+    font-size: 2rem;
     text-align: center;
+}
+ul{
+    list-style-type: none;
+}
+li{
+    margin-top: 10px;
+    font-weight: lighter;
+}
+em{
+    background-color: yellow;
+}
+img{
+    width: 800px;
 }
