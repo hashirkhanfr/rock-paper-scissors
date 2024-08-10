@@ -45,11 +45,40 @@ function displayResult(charac){
         botLabel.textContent = ++computerScore;
     }
 
+    if(humanScore === 5 || computerScore === 5){
+        gameContainer.remove();
+        let finalResult = document.createElement("h2");
+        gameResultDiv.appendChild(finalResult);
+        finalResult.style.cssText = `font-family: "Orbitron", sans-serif; font-size: 3em;`
+        let restartButton = document.createElement("button");
+        gameResultDiv.appendChild(restartButton);
+
+        if (humanScore === 5){
+            finalResult.innerHTML=`<span style="color: rgb(0, 173, 216);">Player</span> WINS THE GAME`;
+        }
+        else if (computerScore === 5){
+            finalResult.innerHTML=`<span style="color: red;">Computer</span> WINS THE GAME`;
+        }
+
+        restartButton.addEventListener("click",()=>{
+            gameResultDiv.removeChild(finalResult);
+            gameResultDiv.removeChild(restartButton);
+            humanScore = 0;
+            computerScore = 0;
+        })
+
+    }
 }
 
 let playerLabel = document.querySelector(".player-results");
 let botLabel = document.querySelector(".bot-results");
 let roundResult = document.querySelector(".round-results");
+
+let gameResultDiv = document.querySelector(".final-result");
+
+let gameSection = document.querySelector("#game-section");
+let gameContainer = document.querySelector(".game-container");
+
 let humanScore = 0                            
    ,computerScore = 0;  
 
