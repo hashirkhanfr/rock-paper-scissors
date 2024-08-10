@@ -11,16 +11,21 @@
         <nav>
             <ul>
                 <li>Rock Paper Scissors</li>
-                <li>Git Repository</li>
+                <li><a href="https://github.com/hashirkhanfr/rock-paper-scissors">Git Repository</a></li>
             </ul>
         </nav>
     </header>
+    <main>
     <section id="game-section">
         <h1>Welcome to Rock Paper Scissors</h1>
         <div class="Rules">
             <p class="rules">The first one to get to 5 points wins</p>
         </div>
-        <div class="game-container">
+        <div class="player-labels">
+            <div><h2>Player's Choice</h2></div>
+            <div><h2>Computer's Choice</h2></div>
+        </div>
+        <div class="game-container">  
             <div class="battlefield player-field">
                 <div class="rock-box p-choice">
                     <img width="100px" class="pButton game-button rock" src="https://github.com/praxeds/theodinproject-rock-paper-scissors/blob/main/assets/images/raised-fist_270a.png?raw=true" alt="Raised fist">
@@ -45,8 +50,20 @@
             </div>
         </div>
     </section>
-    <footer>
+    <div class="results-container">
+        <div class="player-results">
+            
+        </div>
+        <div class="bot-results">
 
+        </div>
+    </div>
+    <div class="final-result">
+
+    </div>
+    </main>
+    <footer>
+        <h2>Made by Hashir Khan</h2>
     </footer>
     <script src="index.js"></script>
 </body>
