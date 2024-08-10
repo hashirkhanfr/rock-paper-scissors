@@ -11,6 +11,7 @@ body{
     display: flex;
     flex-flow: column nowrap;
     color: white;
+
 }
 main{
     flex: 1;
@@ -36,7 +37,6 @@ li:hover{
     transition-delay: 0.5ms;
     cursor: pointer;    
 }
-
 header,footer{
     list-style-type: none;
     padding: 10px;
@@ -58,12 +58,19 @@ h1{
 .game-container{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.computer-game-container{
+    transform: scale(0.8);
+    opacity: 40%;
 }
 
 .battlefield{
     display: flex;
     justify-content: space-evenly;
     gap: 1.2em;
+    flex-wrap: wrap;
 }
 .battlefield > div{
     border: 5px solid gray;
@@ -71,7 +78,7 @@ h1{
     padding: 2em;
 }
 .battlefield > div:hover{
-    background-color: rgba(255, 255, 255, 0.726);
+    background-color: rgba(0, 188, 245, 0.726);
     transform: scale(1.1);
     transition-duration: 0.2s;
     transition-property: all;
@@ -87,8 +94,42 @@ h1{
 .results-container{
     display: flex;
     justify-content: space-around;
+    margin-top: 5em;
 }
 
 .player-results,.bot-results{
     font-size: 4em;
+}
+.scorecard{
+    background-color: black;
+    padding: 0 2em;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+.scorecard p{
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.round-res-div{
+    width: 300px;
+    font-size: 2em;
+}
+
+
+@media screen and (max-width: 786px){
+    html{
+        font-size: 12px;
+    }
+    .battlefield{
+        gap: 1em;
+    }
+    .results-container{
+        margin-top: 0;
+    }
+    .round-res-div{
+        width: 100px;
+        font-size: 1em;
+    }
 }
