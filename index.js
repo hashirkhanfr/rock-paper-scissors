@@ -1,58 +1,56 @@
-function getRandomNumer(){
-    return (Math.floor(Math.random() * 3));  
-} 
-
 function getComputerChoice(){
-    return (getRandomNumer());    // returns the random number between 0 - 2 from getRandomNumber().
-}
-
-function getUserChoice(count){
-    // let stringChoice = prompt(`--------Round ${count}--------\nRock,Paper or Scissors?`); 
-    let finalChoice;                                       
-    switch(stringChoice.toLowerCase()){                    
-        case "rock":        finalChoice = 0; break;        
-        case "paper":       finalChoice = 1; break;       
-        case "scissors":    finalChoice = 2; break;      
+    document.querySelector(".rock-box.b-choice").style.backgroundColor = "unset";
+    document.querySelector(".paper-box.b-choice").style.backgroundColor = "unset";
+    document.querySelector(".scissors-box.b-choice").style.backgroundColor = "unset";
+    let choice = Math.floor(Math.random() * 3);  
+    switch (choice){
+        case 0:
+            document.querySelector(".rock-box.b-choice").style.backgroundColor = "rgb(0, 150, 219)";
+            break;
+        case 1:
+            document.querySelector(".paper-box.b-choice").style.backgroundColor = "rgb(0, 150, 219)";
+            break;
+        case 2:
+            document.querySelector(".scissors-box.b-choice").style.backgroundColor = "rgb(0, 150, 219)";
+            break;
     }
-    return (finalChoice);
-}
+    return choice;
+} 
 
 function playRound(myChoice,botChoice){
     let printArray = ["Rock","Paper","Scissors"];         
     if ((myChoice === 0 && botChoice === 2) || (myChoice === 1 && botChoice === 0) || (myChoice === 2 && botChoice === 1))
-    {
-        // console.log("You Win! " + printArray[myChoice] + " beats " + printArray[botChoice]);
-        return ('W');  
-    }
+        displayResult('W');  
         
     else if ((myChoice === 0 && botChoice === 1) || (myChoice === 1 && botChoice === 2) || (myChoice === 2 && botChoice === 0))
-    {
-        // console.log("You Lose! " + printArray[botChoice] + " beats " + printArray[myChoice]);
-        return ('L');   
-    }
+        displayResult('L');   
     else
-    {
-        // console.log("It's a Tie! " + printArray[botChoice] + " ties with " + printArray[myChoice]);
-        return ('T'); 
-    }
-        
+        displayResult('T');   
 }
 
-function playGame(maxGames){
-    for (let i = 1; i <= maxGames; i++){
-        // console.log("------ROUND " + i + "------");
-        const humanSelection = getUserChoice(i);       
-        const computerSelection = getComputerChoice(); 
-        switch(playRound(humanSelection,computerSelection)){      
-            case 'W' : humanScore++    ; break;
-            case 'L' : computerScore++ ; break;
-        }     
+function displayResult(charac){
+    if (charac === 'W'){
+        playerLabel.textContent = ++humanScore;
     }
-    // alert(`Player's Score: ${humanScore}` + `\nComputer's Score: ${computerScore}`);  
-
+    else if (charac === 'L'){
+        botLabel.textContent = ++computerScore;
+    }
 }
+
+let playerLabel = document.querySelector(".player-results");
+let botLabel = document.querySelector(".bot-results");
 
 let humanScore = 0                            
    ,computerScore = 0;                        
 
-playGame(5);                             
+document.querySelector(".rock-box").addEventListener("click",function(){
+    playRound(0,getComputerChoice())
+});
+document.querySelector(".paper-box").addEventListener("click",function(){
+    playRound(1,getComputerChoice())
+})
+document.querySelector(".scissors-box").addEventListener("click",function(){
+    playRound(2,getComputerChoice())
+})                             
+
+
