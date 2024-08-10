@@ -9,7 +9,7 @@ body{
     margin: 0;
     background-color: #3f3f3f;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     color: white;
 }
 main{
@@ -27,6 +27,15 @@ a{
     text-decoration: none;
     color: black;
 }
+li:hover{
+    font-weight: bold;
+    transform: translateY(-5px);
+    transition-duration: 0.2s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.5ms;
+    cursor: pointer;    
+}
 header{
     background-color: #fcce00;
     font-size: 2em;
@@ -35,9 +44,12 @@ header{
     color: black;
 }
 footer{
+    list-style-type: none;
+    padding: 10px;
     background-color: #fcce00;
     font-family: 'Raleway';
     color: black;
+    font-size: 2em;
 }
 h1{
     font-size: 4rem;
