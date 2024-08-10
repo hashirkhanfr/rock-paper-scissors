@@ -11,13 +11,3 @@ body{
 ul{
     list-style-type: none;
 }
-li{
-    margin-top: 10px;
-    font-weight: lighter;
-}
-em{
-    background-color: yellow;
-}
-img{
-    width: 800px;
-}
