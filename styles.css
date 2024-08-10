@@ -7,9 +7,10 @@ body{
     font-weight: bold;
     text-align: center;
     margin: 0;
-    background-color: #6bd0ff;
+    background-color: #3f3f3f;
     display: flex;
     flex-flow: column wrap;
+    color: white;
 }
 main{
     flex: 1;
@@ -24,20 +25,28 @@ ul{
 }
 a{
     text-decoration: none;
-    color: white;
+    color: black;
 }
 header{
-    background-color: #a6dbff;
-    padding: 20px;
+    background-color: #fcce00;
     font-size: 2em;
+    padding: 20px;
+    font-family: 'Raleway';
+    color: black;
+}
+footer{
+    background-color: #fcce00;
+    font-family: 'Raleway';
+    color: black;
 }
 h1{
     font-size: 4rem;
     margin: 0.6em;
 }
 .rules{
-    color: rgb(235, 235, 235);
+    color: #fcce00;
     font-size: 2em;
+    font-family: 'Raleway';
 }
 
 .game-container{
@@ -62,7 +71,7 @@ h1{
     transition-property: all;
     transition-timing-function: ease-in-out;
     transition-delay: 0.5ms;
-    cursor: pointer;
+    cursor: pointer;    
 }
 .player-labels{
     display: flex;
@@ -71,9 +80,9 @@ h1{
 
 .results-container{
     display: flex;
-    justify-content: space-evenly;
-    gap: 1.2em;
+    justify-content: space-around;
 }
-footer{
-    background-color: #a6dbff;
+
+.player-results,.bot-results{
+    font-size: 4em;
 }
