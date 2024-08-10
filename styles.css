@@ -36,14 +36,8 @@ li:hover{
     transition-delay: 0.5ms;
     cursor: pointer;    
 }
-header{
-    background-color: #fcce00;
-    font-size: 2em;
-    padding: 20px;
-    font-family: 'Raleway';
-    color: black;
-}
-footer{
+
+header,footer{
     list-style-type: none;
     padding: 10px;
     background-color: #fcce00;
