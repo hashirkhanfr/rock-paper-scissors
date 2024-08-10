@@ -1,13 +1,78 @@
+html{
+    font-size: 16px;
+}
 body{
     height: 100vh;
-    background: linear-gradient(rgb(0, 241, 141),rgb(0, 140, 255));
-    margin-top: 250px;
     font-family: Poppins,sans-serif;
     font-weight: bold;
-    text-transform: uppercase;
-    font-size: 2rem;
     text-align: center;
+    margin: 0;
+    background-color: #6bd0ff;
+    display: flex;
+    flex-flow: column wrap;
+}
+main{
+    flex: 1;
 }
 ul{
     list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 50px;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+header{
+    background-color: #a6dbff;
+    padding: 20px;
+    font-size: 2em;
+}
+h1{
+    font-size: 4rem;
+    margin: 0.6em;
+}
+.rules{
+    color: rgb(235, 235, 235);
+    font-size: 2em;
+}
+
+.game-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.battlefield{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1.2em;
+}
+.battlefield > div{
+    border: 5px solid gray;
+    border-radius: 12px;
+    padding: 2em;
+}
+.battlefield > div:hover{
+    background-color: rgba(255, 255, 255, 0.726);
+    transform: scale(1.1);
+    transition-duration: 0.2s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.5ms;
+}
+.player-labels{
+    display: flex;
+    justify-content: space-around;
+}
+
+.results-container{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1.2em;
+}
+footer{
+    background-color: #a6dbff;
 }
