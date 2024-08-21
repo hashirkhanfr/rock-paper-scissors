@@ -46,13 +46,14 @@ function displayResult(charac){
     }
 
     if(humanScore === 5 || computerScore === 5){
-        gameContainer.remove();
         let finalResult = document.createElement("h2");
-        gameResultDiv.appendChild(finalResult);
         finalResult.style.cssText = `font-family: "Orbitron", sans-serif; font-size: 3em;`
-        let restartButton = document.createElement("button");
-        gameResultDiv.appendChild(restartButton);
+        gameResultDiv.appendChild(finalResult);
 
+        let restartButton = document.createElement("button");
+        restartButton.textContent = "RESTART";
+        restartButton.style.cssText = `font-family: 'Orbitron',sans-serif; font-size: 3em; padding: 12px 20px; border-radius: 12px; background-color: black; color: #fcce00`
+        gameResultDiv.appendChild(restartButton);
         if (humanScore === 5){
             finalResult.innerHTML=`<span style="color: rgb(0, 173, 216);">Player</span> WINS THE GAME`;
         }
@@ -65,6 +66,8 @@ function displayResult(charac){
             gameResultDiv.removeChild(restartButton);
             humanScore = 0;
             computerScore = 0;
+            playerLabel.textContent = 0;
+            botLabel.textContent = 0;
         })
 
     }
